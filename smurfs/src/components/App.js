@@ -1,5 +1,10 @@
 import React, { Component } from "react";
+import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
 import "./App.css";
+
+export const store = createStore(reducer, applyMiddleware(thunk));
+
 class App extends Component {
   render() {
     return (
