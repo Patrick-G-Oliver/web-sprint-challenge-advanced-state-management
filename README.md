@@ -24,10 +24,24 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What problem does the context API help solve?
+
+The Contex API eliminates the need for props drilling by permitting the storage of state data on a context object, from which it can be consumed by components throughout the application. 
+
 2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+Actions are objects that tell the reducer how to update state based on user interactions that trigger action creator functions. The reducer, updates state data by taking in action arguments and a current state argument, and returning a new state based upon a comparison between how state was before and after the actions carried out. This updated state is then sent to the store (state tree), and there it is copied, stored, and sent to the appication's components as needed. The store is the "single source of truth," because it is only in the store where state is changed, and that change is only enacted by the reducer, itself a pure function. 
+
 3. What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+Application state is centralized and avialable to all components in an app, while component state is only available within a given component. Component state is good for simple components, like forms, in small appications, while application state is needed in cases where state data needs to be shared across an application and amongst its components. 
+
 4. Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+Redux-thunk allow for the, necessarily asynchronous, consumption of data from APIs despite the inherently synchronous nature of Redux state management. It changes action creators by enabling them to return a function that calls for a wait-time, during which time is allowed for a response to be receieved from an API, and then call another function to handle the data received in the response. 
+
 5. What is your favorite state management system you've learned and this sprint? Please explain why!
+
+I prefer Redux, to Context API, mainly because it's more broadly appicable to developing apps. Basically, I would rather be well-versed in a state management system that can handle large and small applications, though, granted, I still have a lot to learn about how Context API would/could be implemented in small parts of large appications, and it's utility in simplifying small, simple projects. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
