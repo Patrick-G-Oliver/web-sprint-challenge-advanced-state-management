@@ -5,6 +5,8 @@ import thunk from "redux-thunk";
 import "./App.css";
 
 import { reducer } from "../reducers";
+import  AddSmurfForm from "./AddSmurfForm";
+import Smurf from "./Smurf";
 
 export const store = createStore(reducer, applyMiddleware(thunk));
 
@@ -13,9 +15,8 @@ class App extends Component {
     return (
       <div className="App">
         <h1>SMURFS! W/Redux</h1>
-        <div>Welcome to your state management version of Smurfs!</div>
-        <div>Start inside of your `src/index.js` file!</div>
-        <div>Have fun!</div>
+        <AddSmurfForm />
+        <Smurf />
       </div>
     );
   }
