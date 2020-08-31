@@ -15,13 +15,13 @@ const Smurf = ({ getSmurf, smurfs, isFetching }) => {
         <div>
             {smurfs.map( (smurf) => {
                 return (
-                    <div>
+                    <div data-testId="Smurfs">
                         <p>Smurf Name: {smurf.name}</p>
                         <p>Smurf Age: {smurf.age}</p>
                         <p>Smurf Height: {smurf.height}</p>
                     </div>
                 );
-            })};
+            })}
         </div>
     );
 };
